@@ -12,8 +12,6 @@ public class PalindromicPermutation {
     }
 
     public static boolean isPalindromiCPermutation(String str) {
-
-
         Map<Character , Integer> map = new HashMap<>();
         for(char c : str.toCharArray())
             map.put(c, map.getOrDefault(c, 0) +1);
@@ -22,16 +20,13 @@ public class PalindromicPermutation {
 
     public static boolean  checkMaxOneOdd(Map<Character, Integer> map) {
         boolean foundOdd = false;
-
         for(int num: map.values()) {
             if(num % 2 == 1) {
                 if(foundOdd)
                     return false;
                 foundOdd = true;
             }
-
         }
-
         return true;
     }
 }
